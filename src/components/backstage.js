@@ -40,7 +40,7 @@ const renderTable = (data) => {
             <div id="deleteBtn" data-id=${
               item.id
             } class="btn btn-outline-danger text-nowrap">刪除</div>
-            <a href="../../editView.html?id=${
+            <a href="./editView.html?id=${
               item.id
             }" id="editBtn" class="btn btn-warning text-nowrap">編輯</a>
           </div>
