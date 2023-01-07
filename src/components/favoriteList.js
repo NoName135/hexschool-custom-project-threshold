@@ -44,8 +44,8 @@ const renderList = (listData) => {
                 <i class="ms-2 fa-regular fa-bookmark"></i>
               </a>
             </div>
-            <h5 class="card-title fw-bold">${item.title}</h5>
-            <p class="card-text text-truncate">${item.description}</p>
+            <h5 class="card-title fw-bold">${item.list.title}</h5>
+            <p class="card-text text-truncate">${item.list.description}</p>
           </div>
         </div>
       </li>
@@ -71,7 +71,7 @@ const init = async () => {
   const userId = JSON.parse(localStorage.getItem('userData')).id;
 
   await axios
-    .get(`https://hexschool-custom-project-threshold-server.vercel.app/600/users/${userId}/favorites`, {
+    .get(`https://hexschool-custom-project-threshold-server.vercel.app/600/users/${userId}/favorites?_expand=list`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -84,8 +84,8 @@ const init = async () => {
     })
     .catch((err) => {
       console.log(err);
-      // localStorage.clear();
-      // location.reload();
+      localStorage.clear();
+      location.reload();
     });
 };
 

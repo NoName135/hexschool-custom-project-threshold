@@ -1,6 +1,5 @@
 if (!localStorage.getItem('token') || !JSON.parse(localStorage.getItem('userData')).admin) {
   window.location = 'index.html';
-  return;
 }
 
 // 表單驗證選項
@@ -41,7 +40,7 @@ const editList = async() => {
       description: description.value
     })
     .then((res) => {
-      console.log(res.data);
+      // console.log(res.data);
       Swal.fire({
         icon: 'success',
         title: '編輯成功',
@@ -52,7 +51,7 @@ const editList = async() => {
       }, 1500);
     })
     .catch((err) => {
-      console.log(err);
+      // console.log(err);
       Swal.fire({
         icon: 'error',
         title: err.response.statusText,

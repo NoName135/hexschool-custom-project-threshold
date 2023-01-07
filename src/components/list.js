@@ -106,18 +106,19 @@ const deleteBtn = () => {
 };
 
 const renderFavoriteBtn = async (data) => {
+  let favorite = false;
   let str = ''
   if (data.length == 0) {
     addBtn();
   } else {
     data.forEach((item) => {
+      // console.log(item.listId, id)
       if(item.listId == id){
         favoriteId = item.id
-        deleteBtn();
-      }else{
-        addBtn();
+        favorite = true;
       }
     });
+    favorite ? deleteBtn() : addBtn()
   }
 };
 

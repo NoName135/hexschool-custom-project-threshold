@@ -1,6 +1,5 @@
 if (!localStorage.getItem('token') || !JSON.parse(localStorage.getItem('userData')).admin) {
   window.location = 'index.html';
-  return;
 }
 
 // 表單驗證選項
@@ -45,6 +44,7 @@ const addList = async() => {
         title: '新增成功',
         text: res.data.title,
       });
+      addViewForm.reset();
     })
     .catch((err) => {
       // console.log(err);
