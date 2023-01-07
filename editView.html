@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./src/stylesheets/all.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg bg-dark px-4 mb-4">
+    <div class="container-fluid justify-content-start align-items-center">
+      <h2 class="fs-5 navbar-brand text-white mb-0">主控台</h2>
+      <a class="text-decoration-none link-secondary text-light" href="./backstage.html">Home</a>
+    </div>
+  </nav>
+  <div class="container">
+    <h1 class="fs-2 fw-bold">編輯景點</h1>
+    <form id="addViewForm" class="my-5">
+      <div class="mb-3">
+        <label for="title" class="form-label">標題</label>
+        <input data-input="title" type="text" class="form-control" id="title" name="標題">
+        <p class="text-danger" data-msg='標題'></p>
+      </div>
+      <div class="mb-3">
+        <label for="picture" class="form-label">圖片</label>
+        <input data-input="picture" type="text" class="form-control" id="picture" name="圖片">
+        <p class="text-danger" data-msg='圖片'></p>
+      </div>
+      <div class="mb-3">
+        <label for="description">詳細資訊</label>
+        <textarea data-input="description" class="form-control" id="description" name="詳細資訊" rows="3"></textarea>
+        <p class="text-danger" data-msg='詳細資訊'></p>
+      </div>
+      <button type="submit" class="btn btn-primary w-100">送出</button>
+    </form>
+  </div>
+
+  <script src="./src/components/editView.js"></script>
+</body>
+</html>
