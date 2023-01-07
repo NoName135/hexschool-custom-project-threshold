@@ -2,7 +2,7 @@ const deleteList = async (id) => {
   console.log(id);
 
   await axios
-    .delete(`http://localhost:3000/lists/${id}`)
+    .delete(`https://hexschool-custom-project-threshold-server.vercel.app/lists/${id}`)
     .then((res) => {
       // console.log(res);
       Swal.fire({
@@ -65,7 +65,7 @@ const init = async () => {
   }
 
   await axios
-    .get('http://localhost:3000/lists')
+    .get('https://hexschool-custom-project-threshold-server.vercel.app/lists')
     .then((res) => {
       // console.log(res.data);
       renderTable(res.data);

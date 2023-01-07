@@ -49,7 +49,7 @@ const dataMsgs = document.querySelectorAll('[data-msg]');
 
 const signUp = async () => {
   await axios
-    .post('http://localhost:3000/users', {
+    .post('https://hexschool-custom-project-threshold-server.vercel.app/users', {
       email: email.value,
       password: password.value,
       nickname: nickname.value,

@@ -35,7 +35,7 @@ const dataMsgs = document.querySelectorAll('[data-msg]');
 
 const editList = async() => {
   await axios
-    .put(`http://localhost:3000/lists/${id}`, {
+    .put(`https://hexschool-custom-project-threshold-server.vercel.app/lists/${id}`, {
       title: title.value,
       picture: picture.value,
       description: description.value

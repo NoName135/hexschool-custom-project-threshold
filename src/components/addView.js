@@ -33,7 +33,7 @@ const dataMsgs = document.querySelectorAll('[data-msg]');
 
 const addList = async() => {
   await axios
-    .post('http://localhost:3000/lists', {
+    .post('https://hexschool-custom-project-threshold-server.vercel.app/lists', {
       title: title.value,
       picture: picture.value,
       description: description.value

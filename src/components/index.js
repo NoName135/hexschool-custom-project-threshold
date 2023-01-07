@@ -19,7 +19,7 @@ const renderList = (listData) => {
 }
 
 const init = async() => {
-  await axios.get('http://localhost:3000/lists')
+  await axios.get('https://hexschool-custom-project-threshold-server.vercel.app/lists')
     .then(res => {
       // console.log(res);
       renderList(res.data)

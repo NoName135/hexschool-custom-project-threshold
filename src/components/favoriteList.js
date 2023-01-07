@@ -3,7 +3,7 @@ const deleteFavorite = async(id) => {
   console.log(id)
 
   await axios
-    .delete(`http://localhost:3000/600/favorites/${id}`,{
+    .delete(`https://hexschool-custom-project-threshold-server.vercel.app/600/favorites/${id}`,{
       headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -71,7 +71,7 @@ const init = async () => {
   const userId = JSON.parse(localStorage.getItem('userData')).id;
 
   await axios
-    .get(`http://localhost:3000/600/users/${userId}/favorites`, {
+    .get(`https://hexschool-custom-project-threshold-server.vercel.app/600/users/${userId}/favorites`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },

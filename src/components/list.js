@@ -8,7 +8,7 @@ const addFavorite = async() => {
   const userId = JSON.parse(localStorage.getItem('userData')).id;
 
   await axios
-    .post(`http://localhost:3000/600/users/${userId}/favorites`, {
+    .post(`https://hexschool-custom-project-threshold-server.vercel.app/600/users/${userId}/favorites`, {
       title: title,
       description: description,
       userId: userId,
@@ -47,7 +47,7 @@ const deleteFavorite = async() => {
   const token = localStorage.getItem('token');
 
   await axios
-    .delete(`http://localhost:3000/600/favorites/${favoriteId}`,{
+    .delete(`https://hexschool-custom-project-threshold-server.vercel.app/600/favorites/${favoriteId}`,{
       headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -126,7 +126,7 @@ const getFavorite = async () => {
   const userId = JSON.parse(localStorage.getItem('userData')).id;
 
   await axios
-    .get(`http://localhost:3000/600/users/${userId}/favorites`, {
+    .get(`https://hexschool-custom-project-threshold-server.vercel.app/600/users/${userId}/favorites`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -166,7 +166,7 @@ const init = async () => {
   }
 
   await axios
-    .get('http://localhost:3000/lists')
+    .get('https://hexschool-custom-project-threshold-server.vercel.app/lists')
     .then((res) => {
       // console.log(res);
       const content = res.data.filter((item) => item.id == id);

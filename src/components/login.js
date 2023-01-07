@@ -28,7 +28,7 @@ const password = document.querySelector('#password');
 const dataMsgs = document.querySelectorAll('[data-msg]');
 
 const login = async() => {
-  await axios.post('http://localhost:3000/login', {
+  await axios.post('https://hexschool-custom-project-threshold-server.vercel.app/login', {
     "email": email.value,
     "password": password.value
   })
