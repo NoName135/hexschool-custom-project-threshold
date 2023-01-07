@@ -6,7 +6,7 @@ const renderList = (listData) => {
         <div class="card h-100">
           <div class="card-body mb-4">
             <div class="d-flex">
-              <a href="./list.html?article=${item.id}" class="link-primary d-flex ms-auto">延伸閱讀</a>
+              <a href="./#list.html?article=${item.id}" class="link-primary d-flex ms-auto">延伸閱讀</a>
             </div>
             <h5 class="card-title fw-bold">${item.title}</h5>
             <p class="card-text text-truncate">${item.description}</p>
